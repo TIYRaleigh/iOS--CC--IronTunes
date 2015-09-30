@@ -12,7 +12,6 @@
 		DF4B789A1BA736940087FEA1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF4B78981BA736940087FEA1 /* Main.storyboard */; };
 		DF4B789C1BA736940087FEA1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF4B789B1BA736940087FEA1 /* Images.xcassets */; };
 		DF4B789F1BA736940087FEA1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF4B789D1BA736940087FEA1 /* LaunchScreen.xib */; };
-		DF4B78AB1BA736940087FEA1 /* IronTunesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4B78AA1BA736940087FEA1 /* IronTunesTests.swift */; };
 		DF4B78B51BA74C7B0087FEA1 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = DF4B78B41BA74C7B0087FEA1 /* README.txt */; };
 		DF4B78BB1BA75A790087FEA1 /* dubstep.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DF4B78B61BA75A790087FEA1 /* dubstep.mp3 */; };
 		DF4B78BC1BA75A790087FEA1 /* happiness.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DF4B78B71BA75A790087FEA1 /* happiness.mp3 */; };
@@ -22,16 +21,6 @@
 		DF4B78C11BA75C620087FEA1 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4B78C01BA75C620087FEA1 /* Song.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		DF4B78A51BA736940087FEA1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = DF4B78871BA736940087FEA1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = DF4B788E1BA736940087FEA1;
-			remoteInfo = IronTunes;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		DF4B788F1BA736940087FEA1 /* IronTunes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IronTunes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF4B78931BA736940087FEA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -40,9 +29,6 @@
 		DF4B78991BA736940087FEA1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DF4B789B1BA736940087FEA1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		DF4B789E1BA736940087FEA1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		DF4B78A41BA736940087FEA1 /* IronTunesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IronTunesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		DF4B78A91BA736940087FEA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DF4B78AA1BA736940087FEA1 /* IronTunesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IronTunesTests.swift; sourceTree = "<group>"; };
 		DF4B78B41BA74C7B0087FEA1 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
 		DF4B78B61BA75A790087FEA1 /* dubstep.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = dubstep.mp3; sourceTree = "<group>"; };
 		DF4B78B71BA75A790087FEA1 /* happiness.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = happiness.mp3; sourceTree = "<group>"; };
@@ -60,13 +46,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DF4B78A11BA736940087FEA1 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -74,7 +53,6 @@
 			isa = PBXGroup;
 			children = (
 				DF4B78911BA736940087FEA1 /* IronTunes */,
-				DF4B78A71BA736940087FEA1 /* IronTunesTests */,
 				DF4B78901BA736940087FEA1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -83,7 +61,6 @@
 			isa = PBXGroup;
 			children = (
 				DF4B788F1BA736940087FEA1 /* IronTunes.app */,
-				DF4B78A41BA736940087FEA1 /* IronTunesTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -108,23 +85,6 @@
 			isa = PBXGroup;
 			children = (
 				DF4B78931BA736940087FEA1 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		DF4B78A71BA736940087FEA1 /* IronTunesTests */ = {
-			isa = PBXGroup;
-			children = (
-				DF4B78AA1BA736940087FEA1 /* IronTunesTests.swift */,
-				DF4B78A81BA736940087FEA1 /* Supporting Files */,
-			);
-			path = IronTunesTests;
-			sourceTree = "<group>";
-		};
-		DF4B78A81BA736940087FEA1 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				DF4B78A91BA736940087FEA1 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -161,39 +121,19 @@
 			productReference = DF4B788F1BA736940087FEA1 /* IronTunes.app */;
 			productType = "com.apple.product-type.application";
 		};
-		DF4B78A31BA736940087FEA1 /* IronTunesTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = DF4B78B11BA736940087FEA1 /* Build configuration list for PBXNativeTarget "IronTunesTests" */;
-			buildPhases = (
-				DF4B78A01BA736940087FEA1 /* Sources */,
-				DF4B78A11BA736940087FEA1 /* Frameworks */,
-				DF4B78A21BA736940087FEA1 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				DF4B78A61BA736940087FEA1 /* PBXTargetDependency */,
-			);
-			name = IronTunesTests;
-			productName = IronTunesTests;
-			productReference = DF4B78A41BA736940087FEA1 /* IronTunesTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		DF4B78871BA736940087FEA1 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0640;
+				LastSwiftMigration = 0700;
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "The Iron Yard";
 				TargetAttributes = {
 					DF4B788E1BA736940087FEA1 = {
 						CreatedOnToolsVersion = 6.4;
-					};
-					DF4B78A31BA736940087FEA1 = {
-						CreatedOnToolsVersion = 6.4;
-						TestTargetID = DF4B788E1BA736940087FEA1;
 					};
 				};
 			};
@@ -211,7 +151,6 @@
 			projectRoot = "";
 			targets = (
 				DF4B788E1BA736940087FEA1 /* IronTunes */,
-				DF4B78A31BA736940087FEA1 /* IronTunesTests */,
 			);
 		};
 /* End PBXProject section */
@@ -233,13 +172,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DF4B78A21BA736940087FEA1 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -253,23 +185,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DF4B78A01BA736940087FEA1 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				DF4B78AB1BA736940087FEA1 /* IronTunesTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		DF4B78A61BA736940087FEA1 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = DF4B788E1BA736940087FEA1 /* IronTunes */;
-			targetProxy = DF4B78A51BA736940087FEA1 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		DF4B78981BA736940087FEA1 /* Main.storyboard */ = {
@@ -312,6 +228,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -327,7 +244,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -365,7 +282,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -378,6 +295,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = IronTunes/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tiy.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -388,41 +306,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = IronTunes/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tiy.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
-		DF4B78B21BA736940087FEA1 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = IronTunesTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IronTunes.app/IronTunes";
-			};
-			name = Debug;
-		};
-		DF4B78B31BA736940087FEA1 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = IronTunesTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IronTunes.app/IronTunes";
 			};
 			name = Release;
 		};
@@ -445,14 +330,7 @@
 				DF4B78B01BA736940087FEA1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-		};
-		DF4B78B11BA736940087FEA1 /* Build configuration list for PBXNativeTarget "IronTunesTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				DF4B78B21BA736940087FEA1 /* Debug */,
-				DF4B78B31BA736940087FEA1 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
