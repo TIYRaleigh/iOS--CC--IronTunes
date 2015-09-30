@@ -82,12 +82,18 @@ class NowPlayingViewController: UIViewController
         AVAudioSession.sharedInstance().requestRecordPermission({(granted: Bool)-> Void in
             if granted
             {
-                AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback, error: nil)
-                AVAudioSession.sharedInstance().setActive(true, error: nil)
+                do {
+                    try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
+                } catch _ {
+                }
+                do {
+                    try AVAudioSession.sharedInstance().setActive(true)
+                } catch _ {
+                }
             }
             else
             {
-                println("Audio session could not be configured; user denied permission.")
+                print("Audio session could not be configured; user denied permission.")
             }
         })
     }
