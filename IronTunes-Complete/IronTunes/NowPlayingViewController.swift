@@ -13,11 +13,11 @@ import MediaPlayer
 class NowPlayingViewController: UIViewController
 {
 
-    @IBOutlet var songTitleLabel: UILabel!
-    @IBOutlet var artistLabel: UILabel!
-    @IBOutlet var albumArtwork: UIImageView!
+    @IBOutlet weak var songTitleLabel: UILabel!
+    @IBOutlet weak var artistLabel: UILabel!
+    @IBOutlet weak var albumArtwork: UIImageView!
     
-    @IBOutlet var playPauseButton: UIButton!
+    @IBOutlet weak var playPauseButton: UIButton!
     
     let avQueuePlayer = AVQueuePlayer()
     var songs = Array<Song>()
@@ -108,23 +108,32 @@ class NowPlayingViewController: UIViewController
     
     func setupAudioSession()
     {
+        var errorMsg: String?
+        
         AVAudioSession.sharedInstance().requestRecordPermission({(granted: Bool)-> Void in
             if granted
             {
                 do {
                     try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
                 } catch _ {
+                    errorMsg = "Audio session could not be set to playback."
                 }
                 do {
                     try AVAudioSession.sharedInstance().setActive(true)
                 } catch _ {
+                    errorMsg = "Audio session could not activate."
                 }
             }
             else
             {
-                print("Audio session could not be configured; user denied permission.")
+                errorMsg = "Audio session could not be configured; user denied permission."
             }
         })
+        if let error = errorMsg
+        {
+            let alert = UIAlertController(title: "Audio Session Error", message: error, preferredStyle: .Alert)
+            presentViewController(alert, animated: true, completion: nil)
+        }
     }
     
     func togglePlayback(play: Bool)
