@@ -40,14 +40,14 @@ class NowPlayingViewController: UIViewController
     
     // MARK: - Action handlers
     
-    @IBAction func playPauseTapped(sender: UIButton)
+    @IBAction func playPauseTapped(_ sender: UIButton)
     {
         togglePlayback(!nowPlaying)
     }
     
-    @IBAction func skipForwardTapped(sender: UIButton)
+    @IBAction func skipForwardTapped(_ sender: UIButton)
     {
-        let currentSongIndex = (songs as NSArray).indexOfObject(currentSong!)
+        let currentSongIndex = (songs as NSArray).index(of: currentSong!)
         let nextSong: Int
         
         if currentSongIndex + 1 >= songs.count
@@ -63,9 +63,9 @@ class NowPlayingViewController: UIViewController
         togglePlayback(true)
     }
     
-    @IBAction func skipBackTapped(sender: UIButton)
+    @IBAction func skipBackTapped(_ sender: UIButton)
     {
-        avQueuePlayer.seekToTime(CMTimeMakeWithSeconds(0.0, 1))
+        avQueuePlayer.seek(to: CMTimeMakeWithSeconds(0.0, 1))
         if !nowPlaying
         {
             togglePlayback(true)
@@ -98,8 +98,8 @@ class NowPlayingViewController: UIViewController
         avQueuePlayer.removeAllItems()
         if let song = currentSong
         {
-            song.playerItem.seekToTime(CMTimeMakeWithSeconds(0.0, 1))
-            avQueuePlayer.insertItem(song.playerItem, afterItem: nil)
+            song.playerItem.seek(to: CMTimeMakeWithSeconds(0.0, 1))
+            avQueuePlayer.insert(song.playerItem, after: nil)
             songTitleLabel.text = song.title
             artistLabel.text = song.artist
             albumArtwork.image = UIImage(named: song.albumArtworkName)
@@ -131,22 +131,22 @@ class NowPlayingViewController: UIViewController
         })
         if let error = errorMsg
         {
-            let alert = UIAlertController(title: "Audio Session Error", message: error, preferredStyle: .Alert)
-            presentViewController(alert, animated: true, completion: nil)
+            let alert = UIAlertController(title: "Audio Session Error", message: error, preferredStyle: .alert)
+            present(alert, animated: true, completion: nil)
         }
     }
     
-    func togglePlayback(play: Bool)
+    func togglePlayback(_ play: Bool)
     {
         nowPlaying = play
         if play
         {
-            playPauseButton.setImage(UIImage(named: "Pause"), forState: UIControlState.Normal)
+            playPauseButton.setImage(UIImage(named: "Pause"), for: UIControlState())
             avQueuePlayer.play()
         }
         else
         {
-            playPauseButton.setImage(UIImage(named: "Play"), forState: UIControlState.Normal)
+            playPauseButton.setImage(UIImage(named: "Play"), for: UIControlState())
             avQueuePlayer.pause()
         }
     }

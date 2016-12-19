@@ -24,6 +24,6 @@ class Song
         self.artist = artist
         self.filename = filename
         self.albumArtworkName = albumArtwork
-        self.playerItem = AVPlayerItem(URL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource(filename, ofType: "mp3")!))
+        self.playerItem = AVPlayerItem(url: URL(fileURLWithPath: Bundle.main.path(forResource: filename, ofType: "mp3")!))
     }
 }
